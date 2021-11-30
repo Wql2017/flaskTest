@@ -1,8 +1,8 @@
 FROM ubuntu:20.04
 
-COPY ./hello.py /root/flaskdemo/
+COPY ./app/hello.py /root/flaskproject/
 
-WORKDIR /root/flaskdemo/
+WORKDIR /root/flaskproject/
 
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list &&  \
     sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
@@ -11,4 +11,4 @@ RUN apt-get clean && apt-get update && apt-get install -y python3 && apt-get ins
 
 RUN pip3 install Flask && apt-get install -y curl
 
-CMD [ "bash" ]
+CMD [ "python3" ,"/root/flaskproject/hello.py"]
