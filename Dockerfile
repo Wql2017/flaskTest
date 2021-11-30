@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-COPY ./app/hello.py /root/flaskdemo/
+COPY ./hello.py /root/flaskdemo/
 
 WORKDIR /root/flaskdemo/
 
