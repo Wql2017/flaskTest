@@ -11,4 +11,4 @@ RUN apt-get clean && apt-get update && apt-get install -y python3 && apt-get ins
 
 RUN pip3 install Flask && apt-get install -y curl
 
-CMD [ "bash" ]
+CMD [ "python3","/root/flaskdemo/hello.py"]
