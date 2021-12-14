@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My first app</title>
+    </head>
+
+    <body>
+        <h1>Echo Services</h1>
+        
+        <hr />
+        
+        {% for one_message in bean['messages']%}
+            <p>
+                {{ one_message }}
+            </p>
+        {% endfor %}
+
+        <br />
+
+        <div>
+            <form action="/echo" method="post">
+                <input name="msg" type="text" placeholder="input something" />
+            </form>
+        </div
+    </body>
+
+</html>
